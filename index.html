@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather App — BCA Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <h1>Weather App</h1>
+      <div class="controls">
+        <button id="geoBtn" title="Use my location">📍 My location</button>
+        <label class="mode-switch">
+          <input id="themeToggle" type="checkbox" />
+          <span>Dark</span>
+        </label>
+      </div>
+    </header>
+
+    <section class="search">
+      <input id="cityInput" type="search" placeholder="Enter city (e.g. Bengaluru)" />
+      <button id="searchBtn">Search</button>
+    </section>
+
+    <section id="result" class="result">
+      <div id="loading" class="loading hidden">Loading…</div>
+      <div id="error" class="error hidden"></div>
+
+      <div id="current" class="current hidden">
+        <div class="left">
+          <img id="currentIcon" alt="weather icon" />
+        </div>
+        <div class="right">
+          <h2 id="locationName"></h2>
+          <div id="temp" class="temp"></div>
+          <div id="description" class="desc"></div>
+          <div class="meta">
+            <span id="humidity"></span>
+            <span id="wind"></span>
+          </div>
+        </div>
+      </div>
+
+      <h3 id="forecastTitle" class="hidden">5-Day Forecast</h3>
+      <div id="forecast" class="forecast hidden"></div>
+    </section>
+
+    <footer class="footer">
+      <small>Powered by OpenWeatherMap — API docs</small>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
